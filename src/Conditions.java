@@ -44,13 +44,21 @@ public class Conditions {
         while(karel.frontIsClear()){
             // move and turn left
             karel.move();
-            karel.turnLeft();
+            //karel.turnLeft();
+            
             // if there is something to pick up
-            while(karel.canPickThing()){
+            if(karel.canPickThing()){
                 // pick up everything
                 karel.pickThing();
+                break;
+            }
+            
+            // did karel hit a wall
+            if(!( karel.frontIsClear() )){
+                karel.turnLeft();
             }
         }
+        
         
         
         
