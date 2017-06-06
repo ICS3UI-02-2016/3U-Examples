@@ -323,7 +323,7 @@ public class JumpingExample extends JComponent {
             overlapY = player.y + player.height - blocks[position].y;
         }else{
             // bottom of block subtract top of player
-            overlapX = blocks[position].y + blocks[position].height - player.y;
+            overlapY = blocks[position].y + blocks[position].height - player.y;
         }
         
         // now check which overlap is smaller
